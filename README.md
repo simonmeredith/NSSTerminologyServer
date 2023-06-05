@@ -2,6 +2,8 @@
 
 This repository aims to provide a library of useful examples/code snippets to help users of the NHS England Terminology Server become more familiar with the basic functions and operations of the server. It should be used in conjunction with the documentation provided in the [terminology module of the FHIR standard](https://www.hl7.org/fhir/terminology-module.html).
 
+If you are new to FHIR terminology then there is a useful walk through from devdays [Follow the Yellow Brick Code](https://www.youtube.com/watch?v=40Lvv2t8OxU)
+
 [Postman](https://www.postman.com/downloads/) is a freely available api tool that can be useful for exploring the FHIR apis that the Terminology Server exposes but all the examples are also provided as codesnippets in various languages (including curl).
 
 # Using [Postman Collection](./postman/ontology.scot.nhs.uk%20examples.postman_collection.json):
