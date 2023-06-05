@@ -5,8 +5,8 @@ var qs = require('querystring');
 
 var options = {
   'method': 'POST',
-  'hostname': 'ontology.nhs.uk',
-  'path': '/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token',
+  'hostname': 'ontology.scot.nhs.uk',
+  'path': '/authorisation/auth/realms/terminology/protocol/openid-connect/token',
   'headers': {
   },
   'maxRedirects': 20

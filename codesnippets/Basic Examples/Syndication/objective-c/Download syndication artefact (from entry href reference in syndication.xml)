@@ -2,7 +2,7 @@
 
 dispatch_semaphore_t sema = dispatch_semaphore_create(0);
 
-NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://ontology.nhs.uk/syndication/feed/20220201_001_EXT_RC/entry/f3bed611-9c17-4ee2-9a1b-815d5af73272/artefact/conceptmaps_json"]
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://ontology.scot.nhs.uk/syndication/feed/20220201_001_EXT_RC/entry/f3bed611-9c17-4ee2-9a1b-815d5af73272/artefact/conceptmaps_json"]
   cachePolicy:NSURLRequestUseProtocolCachePolicy
   timeoutInterval:10.0];
 NSDictionary *headers = @{

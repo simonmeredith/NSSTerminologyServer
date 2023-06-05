@@ -1,4 +1,4 @@
-var client = new RestClient("https://ontology.nhs.uk/production1/fhir/CodeSystem/$validate-code?url=http://hl7.org/fhir/feeding-device&code=handhold-cup&display=Double handhold on glass/cup");
+var client = new RestClient("https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/$validate-code?url=http://hl7.org/fhir/feeding-device&code=handhold-cup&display=Double handhold on glass/cup");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Authorization", "Bearer <token>");

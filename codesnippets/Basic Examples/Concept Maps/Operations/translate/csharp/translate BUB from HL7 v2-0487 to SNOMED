@@ -1,4 +1,4 @@
-var client = new RestClient("https://ontology.nhs.uk/production1/fhir/ConceptMap/102/$translate?code=BUB&system=http://terminology.hl7.org/CodeSystem/v2-0487&target=http://snomed.info/sct");
+var client = new RestClient("https://ontology.scot.nhs.uk/production1/fhir/ConceptMap/102/$translate?code=BUB&system=http://terminology.hl7.org/CodeSystem/v2-0487&target=http://snomed.info/sct");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Authorization", "Bearer <token>");

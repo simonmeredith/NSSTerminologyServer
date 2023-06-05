@@ -1,4 +1,4 @@
-var client = new RestClient("https://ontology.nhs.uk/production1/fhir/ValueSet?name=mental");
+var client = new RestClient("https://ontology.scot.nhs.uk/production1/fhir/ValueSet?name=mental");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Authorization", "Bearer <token>");

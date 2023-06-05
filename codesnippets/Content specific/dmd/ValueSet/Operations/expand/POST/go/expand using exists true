@@ -9,55 +9,101 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/ValueSet/$expand"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand"
   method := "POST"
 
-  payload := strings.NewReader(`{`+""+`
-    "resourceType": "Parameters",`+""+`
-    "parameter": [`+""+`
-        {`+""+`
-            "name": "valueSet",`+""+`
-            "resource": {`+""+`
-                "resourceType": "ValueSet",`+""+`
-                "compose": {`+""+`
-                    "include": [`+""+`
-                        {`+""+`
-                            "system": "https://dmd.nhs.uk",`+""+`
-                            "filter": [`+""+`
-                                {`+""+`
-                                    "property": "CATCD",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "2"`+""+`
-                                },`+""+`
-                                {`+""+`
-                                    "property": "parent",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "VMP"`+""+`
-                                },`+""+`
-                                {`+""+`
-                                    "property": "INVALID",`+""+`
-                                    "op": "exists",`+""+`
-                                    "value": true`+""+`
-                                }`+""+`
-                            ]`+""+`
-                        }`+""+`
-                    ]`+""+`
-                }`+""+`
-            }`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "count",`+""+`
-            "valueInteger": 100`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "filter",`+""+`
-            "valueString": "morphine"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "property",`+""+`
-            "valueString": "INVALID"`+""+`
-        }`+""+`
-    ]`+""+`
+  payload := strings.NewReader(`{`+"
+"+`
+    "resourceType": "Parameters",`+"
+"+`
+    "parameter": [`+"
+"+`
+        {`+"
+"+`
+            "name": "valueSet",`+"
+"+`
+            "resource": {`+"
+"+`
+                "resourceType": "ValueSet",`+"
+"+`
+                "compose": {`+"
+"+`
+                    "include": [`+"
+"+`
+                        {`+"
+"+`
+                            "system": "https://dmd.nhs.uk",`+"
+"+`
+                            "filter": [`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "CATCD",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "2"`+"
+"+`
+                                },`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "parent",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "VMP"`+"
+"+`
+                                },`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "INVALID",`+"
+"+`
+                                    "op": "exists",`+"
+"+`
+                                    "value": true`+"
+"+`
+                                }`+"
+"+`
+                            ]`+"
+"+`
+                        }`+"
+"+`
+                    ]`+"
+"+`
+                }`+"
+"+`
+            }`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "count",`+"
+"+`
+            "valueInteger": 100`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "filter",`+"
+"+`
+            "valueString": "morphine"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "property",`+"
+"+`
+            "valueString": "INVALID"`+"
+"+`
+        }`+"
+"+`
+    ]`+"
+"+`
 }`)
 
   client := &http.Client {

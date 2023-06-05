@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var options = {
   'method': 'GET',
-  'hostname': 'ontology.nhs.uk',
+  'hostname': 'ontology.scot.nhs.uk',
   'path': '/production1/fhir/CodeSystem?url:below=https://dmd.nhs.uk',
   'headers': {
     'Authorization': 'Bearer <token>'

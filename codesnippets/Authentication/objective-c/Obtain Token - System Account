@@ -2,7 +2,7 @@
 
 dispatch_semaphore_t sema = dispatch_semaphore_create(0);
 
-NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token"]
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://ontology.scot.nhs.uk/authorisation/auth/realms/terminology/protocol/openid-connect/token"]
   cachePolicy:NSURLRequestUseProtocolCachePolicy
   timeoutInterval:10.0];
 NSMutableData *postData = [[NSMutableData alloc] initWithData:[@"grant_type=client_credentials" dataUsingEncoding:NSUTF8StringEncoding]];

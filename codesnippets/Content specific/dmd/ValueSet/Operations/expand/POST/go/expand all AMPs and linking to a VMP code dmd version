@@ -9,43 +9,77 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/ValueSet/$expand"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand"
   method := "POST"
 
-  payload := strings.NewReader(`{`+""+`
-    "resourceType": "Parameters",`+""+`
-    "parameter": [`+""+`
-        {`+""+`
-            "name": "valueSet",`+""+`
-            "resource": {`+""+`
-                "resourceType": "ValueSet",`+""+`
-                "compose": {`+""+`
-                    "include": [`+""+`
-                        {`+""+`
-                            "system": "https://dmd.nhs.uk",`+""+`
-                            "version": "202111.0.0",`+""+`
-                            "filter": [`+""+`
-                                {`+""+`
-                                    "property": "parent",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "AMP"`+""+`
-                                },`+""+`
-                                {`+""+`
-                                    "property": "parent",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "15242611000001108"`+""+`
-                                }`+""+`
-                            ]`+""+`
-                        }`+""+`
-                    ]`+""+`
-                }`+""+`
-            }`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "count",`+""+`
-            "valueInteger": 100`+""+`
-        }`+""+`
-    ]`+""+`
+  payload := strings.NewReader(`{`+"
+"+`
+    "resourceType": "Parameters",`+"
+"+`
+    "parameter": [`+"
+"+`
+        {`+"
+"+`
+            "name": "valueSet",`+"
+"+`
+            "resource": {`+"
+"+`
+                "resourceType": "ValueSet",`+"
+"+`
+                "compose": {`+"
+"+`
+                    "include": [`+"
+"+`
+                        {`+"
+"+`
+                            "system": "https://dmd.nhs.uk",`+"
+"+`
+                            "version": "202111.0.0",`+"
+"+`
+                            "filter": [`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "parent",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "AMP"`+"
+"+`
+                                },`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "parent",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "15242611000001108"`+"
+"+`
+                                }`+"
+"+`
+                            ]`+"
+"+`
+                        }`+"
+"+`
+                    ]`+"
+"+`
+                }`+"
+"+`
+            }`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "count",`+"
+"+`
+            "valueInteger": 100`+"
+"+`
+        }`+"
+"+`
+    ]`+"
+"+`
 }`)
 
   client := &http.Client {

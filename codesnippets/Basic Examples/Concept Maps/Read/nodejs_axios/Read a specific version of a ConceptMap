@@ -2,7 +2,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://ontology.nhs.uk/production1/fhir/ConceptMap/NICIP-SNOMED-MAP-20171001/_history/1?_format=application/fhir+xml',
+  url: 'https://ontology.scot.nhs.uk/production1/fhir/ConceptMap/NICIP-SNOMED-MAP-20171001/_history/1?_format=application/fhir+xml',
   headers: { 
     'Authorization': 'Bearer <token>'
   }

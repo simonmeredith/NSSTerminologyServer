@@ -1,6 +1,6 @@
 import http.client
 
-conn = http.client.HTTPSConnection("ontology.nhs.uk")
+conn = http.client.HTTPSConnection("ontology.scot.nhs.uk")
 payload = ''
 headers = {
   'Authorization': 'Bearer <token>'

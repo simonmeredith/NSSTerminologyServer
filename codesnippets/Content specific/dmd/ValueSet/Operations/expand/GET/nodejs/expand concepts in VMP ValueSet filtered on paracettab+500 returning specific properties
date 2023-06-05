@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var options = {
   'method': 'GET',
-  'hostname': 'ontology.nhs.uk',
+  'hostname': 'ontology.scot.nhs.uk',
   'path': '/production1/fhir/ValueSet/$expand?url=https://dmd.nhs.uk/ValueSet/VMP&count=10&null=null&filter=paracet+tab+500&property=parent&property=ROUTECD',
   'headers': {
     'Authorization': 'Bearer <token>'

@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var options = {
   'method': 'GET',
-  'hostname': 'ontology.nhs.uk',
+  'hostname': 'ontology.scot.nhs.uk',
   'path': '/production1/fhir/CodeSystem/$subsumes?system=http://snomed.info/sct&codeA=107963000&codeB=63816008',
   'headers': {
     'Authorization': 'Bearer <token>'

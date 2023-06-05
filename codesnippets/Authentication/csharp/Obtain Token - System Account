@@ -1,4 +1,4 @@
-var client = new RestClient("https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token");
+var client = new RestClient("https://ontology.scot.nhs.uk/authorisation/auth/realms/terminology/protocol/openid-connect/token");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
 request.AddParameter("grant_type", "client_credentials");

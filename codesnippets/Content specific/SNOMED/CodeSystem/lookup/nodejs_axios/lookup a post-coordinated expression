@@ -3,7 +3,7 @@ var data = '{\r\n    "resourceType": "Parameters",\r\n    "parameter": [\r\n    
 
 var config = {
   method: 'post',
-  url: 'https://ontology.nhs.uk/production1/fhir/CodeSystem/$lookup?=',
+  url: 'https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/$lookup?=',
   headers: { 
     'Authorization': 'Bearer <token>'
   },

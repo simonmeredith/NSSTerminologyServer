@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var options = {
   'method': 'POST',
-  'hostname': 'ontology.nhs.uk',
+  'hostname': 'ontology.scot.nhs.uk',
   'path': '/production1/fhir/ValueSet/$validate-code',
   'headers': {
     'Content-Type': 'application/fhir+json',

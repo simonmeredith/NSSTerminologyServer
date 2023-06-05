@@ -2,7 +2,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://ontology.nhs.uk/production1/fhir/CodeSystem/feeding-device',
+  url: 'https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/feeding-device',
   headers: { 
     'Authorization': 'Bearer <token>'
   }

@@ -9,41 +9,73 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/ValueSet/$expand"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand"
   method := "POST"
 
-  payload := strings.NewReader(`{`+""+`
-    "resourceType": "Parameters",`+""+`
-    "parameter": [`+""+`
-        {`+""+`
-            "name": "valueSet",`+""+`
-            "resource": {`+""+`
-                "resourceType": "ValueSet",`+""+`
-                "compose": {`+""+`
-                    "include": [`+""+`
-                        {`+""+`
-                            "system": "https://dmd.nhs.uk",`+""+`
-                            "filter": [`+""+`
-                                {`+""+`
-                                    "property": "parent",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "VMP"`+""+`
-                                }`+""+`
-                            ]`+""+`
-                        }`+""+`
-                    ]`+""+`
-                }`+""+`
-            }`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "count",`+""+`
-            "valueInteger": 100`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "filter",`+""+`
-            "valueString": "co-amox 500"`+""+`
-        }`+""+`
-    ]`+""+`
+  payload := strings.NewReader(`{`+"
+"+`
+    "resourceType": "Parameters",`+"
+"+`
+    "parameter": [`+"
+"+`
+        {`+"
+"+`
+            "name": "valueSet",`+"
+"+`
+            "resource": {`+"
+"+`
+                "resourceType": "ValueSet",`+"
+"+`
+                "compose": {`+"
+"+`
+                    "include": [`+"
+"+`
+                        {`+"
+"+`
+                            "system": "https://dmd.nhs.uk",`+"
+"+`
+                            "filter": [`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "parent",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "VMP"`+"
+"+`
+                                }`+"
+"+`
+                            ]`+"
+"+`
+                        }`+"
+"+`
+                    ]`+"
+"+`
+                }`+"
+"+`
+            }`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "count",`+"
+"+`
+            "valueInteger": 100`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "filter",`+"
+"+`
+            "valueString": "co-amox 500"`+"
+"+`
+        }`+"
+"+`
+    ]`+"
+"+`
 }`)
 
   client := &http.Client {

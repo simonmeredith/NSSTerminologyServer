@@ -1,4 +1,4 @@
-var client = new RestClient("https://ontology.nhs.uk/production1/fhir/ValueSet/$expand?url=https://dmd.nhs.uk/ValueSet/VMP&count=10&&filter=paracet+tab+500&property=parent&property=ROUTECD");
+var client = new RestClient("https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand?url=https://dmd.nhs.uk/ValueSet/VMP&count=10&&filter=paracet+tab+500&property=parent&property=ROUTECD");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Authorization", "Bearer <token>");

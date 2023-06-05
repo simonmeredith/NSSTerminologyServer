@@ -9,25 +9,41 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/ValueSet/$expand"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand"
   method := "POST"
 
-  payload := strings.NewReader(`{`+""+`
-    "resourceType": "Parameters",`+""+`
-    "parameter": [`+""+`
-        {`+""+`
-            "name": "url",`+""+`
-            "valueUri": "https://dmd.nhs.uk/vs"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "system-version",`+""+`
-            "valueCanonical": "https://dmd.nhs.uk|202111.0.0"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "count",`+""+`
-            "valueInteger": 10`+""+`
-        }`+""+`
-    ]`+""+`
+  payload := strings.NewReader(`{`+"
+"+`
+    "resourceType": "Parameters",`+"
+"+`
+    "parameter": [`+"
+"+`
+        {`+"
+"+`
+            "name": "url",`+"
+"+`
+            "valueUri": "https://dmd.nhs.uk/vs"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "system-version",`+"
+"+`
+            "valueCanonical": "https://dmd.nhs.uk|202111.0.0"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "count",`+"
+"+`
+            "valueInteger": 10`+"
+"+`
+        }`+"
+"+`
+    ]`+"
+"+`
 }`)
 
   client := &http.Client {

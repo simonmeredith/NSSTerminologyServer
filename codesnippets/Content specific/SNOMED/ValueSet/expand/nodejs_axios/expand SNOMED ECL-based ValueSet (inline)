@@ -27,7 +27,7 @@ var data = JSON.stringify({
 
 var config = {
   method: 'post',
-  url: 'https://ontology.nhs.uk/production1/fhir/ValueSet/$expand',
+  url: 'https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand',
   headers: { 
     'Content-Type': 'application/fhir+json', 
     'Authorization': 'Bearer <token>'

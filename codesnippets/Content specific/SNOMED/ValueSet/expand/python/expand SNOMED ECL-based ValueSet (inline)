@@ -1,7 +1,7 @@
 import http.client
 import json
 
-conn = http.client.HTTPSConnection("ontology.nhs.uk")
+conn = http.client.HTTPSConnection("ontology.scot.nhs.uk")
 payload = json.dumps({
   "resourceType": "Parameters",
   "parameter": [

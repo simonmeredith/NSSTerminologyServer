@@ -1,4 +1,4 @@
-var client = new RestClient("https://ontology.nhs.uk/production1/fhir/ValueSet/$expand?url=https://dmd.nhs.uk/vs&count=10&filter=Panadol");
+var client = new RestClient("https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand?url=https://dmd.nhs.uk/vs&count=10&filter=Panadol");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Authorization", "Bearer <token>");

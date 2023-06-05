@@ -9,21 +9,33 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/CodeSystem/$lookup?="
+  url := "https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/$lookup?="
   method := "POST"
 
-  payload := strings.NewReader(`{`+""+`
-    "resourceType": "Parameters",`+""+`
-    "parameter": [`+""+`
-        {`+""+`
-            "name": "system",`+""+`
-            "valueUri": "http://snomed.info/sct"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "code",`+""+`
-            "valueString": "397956004 |Prosthetic arthroplasty of the hip|: 363704007 |Procedure site| = ( 24136001 |Hip joint structure|: 272741003 |Laterality| =  7771000 |Left| )"`+""+`
-        }`+""+`
-    ]`+""+`
+  payload := strings.NewReader(`{`+"
+"+`
+    "resourceType": "Parameters",`+"
+"+`
+    "parameter": [`+"
+"+`
+        {`+"
+"+`
+            "name": "system",`+"
+"+`
+            "valueUri": "http://snomed.info/sct"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "code",`+"
+"+`
+            "valueString": "397956004 |Prosthetic arthroplasty of the hip|: 363704007 |Procedure site| = ( 24136001 |Hip joint structure|: 272741003 |Laterality| =  7771000 |Left| )"`+"
+"+`
+        }`+"
+"+`
+    ]`+"
+"+`
 }`)
 
   client := &http.Client {

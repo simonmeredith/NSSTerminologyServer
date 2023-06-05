@@ -9,24 +9,39 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/CodeSystem/$lookup"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/$lookup"
   method := "POST"
 
-  payload := strings.NewReader(`{`+""+`
-  "resourceType": "Parameters",`+""+`
-  "parameter": [`+""+`
-    {`+""+`
-      "name": "coding",`+""+`
-      "valueCoding": {`+""+`
-        "system": "http://snomed.info/sct",`+""+`
-        "code": "56265001"`+""+`
-      }`+""+`
-    },`+""+`
-    {`+""+`
-      "name": "property",`+""+`
-      "valueString": "inactive"`+""+`
-    }`+""+`
-  ]`+""+`
+  payload := strings.NewReader(`{`+"
+"+`
+  "resourceType": "Parameters",`+"
+"+`
+  "parameter": [`+"
+"+`
+    {`+"
+"+`
+      "name": "coding",`+"
+"+`
+      "valueCoding": {`+"
+"+`
+        "system": "http://snomed.info/sct",`+"
+"+`
+        "code": "56265001"`+"
+"+`
+      }`+"
+"+`
+    },`+"
+"+`
+    {`+"
+"+`
+      "name": "property",`+"
+"+`
+      "valueString": "inactive"`+"
+"+`
+    }`+"
+"+`
+  ]`+"
+"+`
 }`)
 
   client := &http.Client {

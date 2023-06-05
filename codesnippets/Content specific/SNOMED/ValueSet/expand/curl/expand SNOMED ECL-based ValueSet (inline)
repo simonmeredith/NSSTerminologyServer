@@ -1,4 +1,4 @@
-curl --location --request POST 'https://ontology.nhs.uk/production1/fhir/ValueSet/$expand' \
+curl --location --request POST 'https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand' \
 --header 'Content-Type: application/fhir+json' \
 --header 'Authorization: Bearer <token>' \
 --data-raw '{

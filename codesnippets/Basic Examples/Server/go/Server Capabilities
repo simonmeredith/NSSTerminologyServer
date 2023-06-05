@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/metadata"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/metadata"
   method := "GET"
 
   client := &http.Client {

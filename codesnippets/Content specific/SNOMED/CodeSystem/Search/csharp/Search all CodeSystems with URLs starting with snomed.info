@@ -1,4 +1,4 @@
-var client = new RestClient("https://ontology.nhs.uk/production1/fhir/CodeSystem?url:below=http://snomed.info");
+var client = new RestClient("https://ontology.scot.nhs.uk/production1/fhir/CodeSystem?url:below=http://snomed.info");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Authorization", "Bearer <token>");

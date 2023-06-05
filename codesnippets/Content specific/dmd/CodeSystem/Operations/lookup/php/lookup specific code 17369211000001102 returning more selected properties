@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://ontology.nhs.uk/production1/fhir/CodeSystem/$lookup?system=https://dmd.nhs.uk&code=17369211000001102&property=FORMCD&property=ROUTECD&property=version',
+  CURLOPT_URL => 'https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/$lookup?system=https://dmd.nhs.uk&code=17369211000001102&property=FORMCD&property=ROUTECD&property=version',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,

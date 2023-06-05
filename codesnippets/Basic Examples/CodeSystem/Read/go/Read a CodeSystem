@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/CodeSystem/feeding-device"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/feeding-device"
   method := "GET"
 
   client := &http.Client {

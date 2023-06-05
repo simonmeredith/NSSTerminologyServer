@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var options = {
   'method': 'GET',
-  'hostname': 'ontology.nhs.uk',
+  'hostname': 'ontology.scot.nhs.uk',
   'path': '/production1/fhir/ValueSet/$validate-code?system=http://snomed.info/sct&code=46836008&url=http://snomed.info/sct?fhir_vs=refset/723264001',
   'headers': {
     'Authorization': 'Bearer <token>'

@@ -9,74 +9,139 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/ValueSet/$expand"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/ValueSet/$expand"
   method := "POST"
 
-  payload := strings.NewReader(`{`+""+`
-    "resourceType": "Parameters",`+""+`
-    "parameter": [`+""+`
-        {`+""+`
-            "name": "valueSet",`+""+`
-            "resource": {`+""+`
-                "resourceType": "ValueSet",`+""+`
-                "compose": {`+""+`
-                    "include": [`+""+`
-                        {`+""+`
-                            "system": "https://dmd.nhs.uk",`+""+`
-                            "filter": [`+""+`
-                                {`+""+`
-                                    "property": "CATCD",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "2"`+""+`
-                                },`+""+`
-                                {`+""+`
-                                    "property": "parent",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "VMP"`+""+`
-                                }`+""+`
-                            ]`+""+`
-                        }`+""+`
-                    ],`+""+`
-                    "exclude": [`+""+`
-                        {`+""+`
-                            "system": "https://dmd.nhs.uk",`+""+`
-                            "filter": [`+""+`
-                                {`+""+`
-                                    "property": "INVALID",`+""+`
-                                    "op": "=",`+""+`
-                                    "value": "1"`+""+`
-                                }`+""+`
-                            ]`+""+`
-                        }`+""+`
-                    ]`+""+`
-                }`+""+`
-            }`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "count",`+""+`
-            "valueInteger": 100`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "filter",`+""+`
-            "valueString": "morphine"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "property",`+""+`
-            "valueString": "CATCD"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "property",`+""+`
-            "valueString": "parent"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "property",`+""+`
-            "valueString": "ROUTECD"`+""+`
-        },`+""+`
-        {`+""+`
-            "name": "property",`+""+`
-            "valueString": "FORMCD"`+""+`
-        }`+""+`
-    ]`+""+`
+  payload := strings.NewReader(`{`+"
+"+`
+    "resourceType": "Parameters",`+"
+"+`
+    "parameter": [`+"
+"+`
+        {`+"
+"+`
+            "name": "valueSet",`+"
+"+`
+            "resource": {`+"
+"+`
+                "resourceType": "ValueSet",`+"
+"+`
+                "compose": {`+"
+"+`
+                    "include": [`+"
+"+`
+                        {`+"
+"+`
+                            "system": "https://dmd.nhs.uk",`+"
+"+`
+                            "filter": [`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "CATCD",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "2"`+"
+"+`
+                                },`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "parent",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "VMP"`+"
+"+`
+                                }`+"
+"+`
+                            ]`+"
+"+`
+                        }`+"
+"+`
+                    ],`+"
+"+`
+                    "exclude": [`+"
+"+`
+                        {`+"
+"+`
+                            "system": "https://dmd.nhs.uk",`+"
+"+`
+                            "filter": [`+"
+"+`
+                                {`+"
+"+`
+                                    "property": "INVALID",`+"
+"+`
+                                    "op": "=",`+"
+"+`
+                                    "value": "1"`+"
+"+`
+                                }`+"
+"+`
+                            ]`+"
+"+`
+                        }`+"
+"+`
+                    ]`+"
+"+`
+                }`+"
+"+`
+            }`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "count",`+"
+"+`
+            "valueInteger": 100`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "filter",`+"
+"+`
+            "valueString": "morphine"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "property",`+"
+"+`
+            "valueString": "CATCD"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "property",`+"
+"+`
+            "valueString": "parent"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "property",`+"
+"+`
+            "valueString": "ROUTECD"`+"
+"+`
+        },`+"
+"+`
+        {`+"
+"+`
+            "name": "property",`+"
+"+`
+            "valueString": "FORMCD"`+"
+"+`
+        }`+"
+"+`
+    ]`+"
+"+`
 }`)
 
   client := &http.Client {

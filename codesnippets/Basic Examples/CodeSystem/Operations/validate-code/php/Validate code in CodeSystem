@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://ontology.nhs.uk/production1/fhir/CodeSystem/$validate-code?url=http://hl7.org/fhir/feeding-device&code=handhold-cup&display=Double%20handhold%20on%20glass/cup',
+  CURLOPT_URL => 'https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/$validate-code?url=http://hl7.org/fhir/feeding-device&code=handhold-cup&display=Double%20handhold%20on%20glass/cup',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,

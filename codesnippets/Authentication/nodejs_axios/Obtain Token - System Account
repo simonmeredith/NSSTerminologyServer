@@ -7,7 +7,7 @@ var data = qs.stringify({
 });
 var config = {
   method: 'post',
-  url: 'https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token',
+  url: 'https://ontology.scot.nhs.uk/authorisation/auth/realms/terminology/protocol/openid-connect/token',
   headers: { },
   data : data
 };

@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var options = {
   'method': 'GET',
-  'hostname': 'ontology.nhs.uk',
+  'hostname': 'ontology.scot.nhs.uk',
   'path': '/production1/fhir/ValueSet/feeding-device/$expand?property=*',
   'headers': {
     'Authorization': 'Bearer <token>'

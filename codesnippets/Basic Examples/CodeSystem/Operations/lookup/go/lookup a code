@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-  url := "https://ontology.nhs.uk/production1/fhir/CodeSystem/$lookup?system=http://snomed.info/sct&code=56265001&_format=json"
+  url := "https://ontology.scot.nhs.uk/production1/fhir/CodeSystem/$lookup?system=http://snomed.info/sct&code=56265001&_format=json"
   method := "GET"
 
   client := &http.Client {
